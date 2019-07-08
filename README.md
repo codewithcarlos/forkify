@@ -24,4 +24,4 @@ Main functionalities of the app include:
 - Babel
 - Node.js/Express
 - Heroku
-- CSS/HTML - responsive to mobile when viewing on widescreen mode (i.e. rotating your phone)
+- CSS/HTML - responsive to mobile
