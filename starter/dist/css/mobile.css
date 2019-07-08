@@ -6,8 +6,7 @@
   height: 100%;
 }
 
-.results__fig,
-.likes__fig {
+.results__fig {
   width: 30vw;
   flex: none;
 }
@@ -96,12 +95,14 @@
 
 .likes__fig {
   display: inline;
-  height: 3rem;
-  width: 3rem;
+  width: 8rem;
 }
 .likes__panel {
-  width: 15rem;
-  overflow: scroll;
+  width: 20rem;
+  height: 100vh;
+  overflow-y: scroll;
+  top: 4rem;
+  left: 0rem;
 }
 .recipe__title {
   width: 90%;
