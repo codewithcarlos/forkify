@@ -59,6 +59,18 @@ elements.searchResPages.addEventListener("click", e => {
   }
 });
 
+/**** SCROLL FUNCTIONS ****/
+function scrollToRecipe() {
+  $("html,body").animate({
+    scrollTop: $(".recipe").offset().top
+  });
+}
+function scrollToShoppingList() {
+  $("html,body").animate({
+    scrollTop: $(".shopping").offset().top
+  });
+}
+
 /**
  * RECIPE CONTROLLER
  */
@@ -89,6 +101,8 @@ const controlRecipe = async () => {
       // Render recipe
       clearLoader();
       recipeView.renderRecipe(state.recipe, state.likes.isLiked(id));
+      // Auto Scroll to Recipe Section
+      scrollToRecipe();
     } catch (err) {
       alert("Error processing recipe");
     }
@@ -112,6 +126,7 @@ const controlList = () => {
     const item = state.list.addItem(el.count, el.unit, el.ingredient);
     listView.renderItem(item);
   });
+  scrollToShoppingList();
 };
 
 // Handle delete and update list item events
